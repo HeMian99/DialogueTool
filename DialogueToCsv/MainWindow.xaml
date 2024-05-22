@@ -1,0 +1,45 @@
+﻿<Window x:Class="DialogueToCsv.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Dialogue Editor" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name = "DialogueGrid" AutoGenerateColumns="False" ColumnWidth="*" CanUserAddRows="False" CellEditEnding="DialogueGrid_CellEditEnding">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="30" IsReadOnly="True" CanUserSort="False">
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox">
+                            <EventSetter Event="PreviewTextInput" Handler="NumberValidationTextBox"/>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="42" CanUserSort="False"/>
+                <DataGridTextColumn Header="Dialogue Text" Binding="{Binding DialogueText}" Width="350" CanUserSort="False"/>
+                <DataGridTextColumn Header="To (ID)" Binding="{Binding ToID}" Width="50" CanUserSort="False">
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox">
+                            <EventSetter Event="PreviewTextInput" Handler="NumberValidationTextBox"/>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Choice?" Binding="{Binding HasChoices}" Width="50" CanUserSort="False">
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox">
+                            <EventSetter Event="PreviewTextInput" Handler="NumberValidationTextBox"/>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Choices Text" Binding="{Binding ChoicesText}" CanUserSort="False"  />
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10">
+            <Button Content="Test Dialogue" Click="TestDialogue" Margin="0,0,10,0" />
+            <Button Content="Add row" Click="AddRow" Margin="0,0,10,0" />
+            <Button Content="Delete row" Click="DeleteRow" Margin="0,0,10,0" />
+            <Button Content="Export as CSV" Click="BtnExportCsv_Click" Margin="0 0 10 0" />
+            <Button Content="Import CSV" Click="BtnImportCsv_Click" Margin="0 0 10 0" />
+        </StackPanel>
+    </Grid>
+</Window>

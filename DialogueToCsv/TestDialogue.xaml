@@ -1,0 +1,32 @@
+<Window x:Class="DialogueToCsv.TestDialogue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DialogueToCsv"
+        mc:Ignorable="d"
+        Title="TestDialogue" Height="450" Width="800">
+    <Grid>
+        <Button Content="Next Dialogue" VerticalAlignment= "Top" Width = "120" Click="NextDialogue" Margin="0,200,0,0"/>
+        <TextBox x:Name="NameTextBox" VerticalAlignment="Center" Width="100" Height="30" IsReadOnly="True"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Center"
+                 Margin="0,90,0,0" />
+        <TextBox x:Name="DialogueTextBox" VerticalAlignment="Bottom" Height="130" IsReadOnly="True"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Center" />
+        <StackPanel x:Name="TextBoxPanel"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,20,140"
+                    Orientation="Vertical">
+            <Button x:Name="Choice1" Width="100" Height="30" Click="GoSpecificDialogue" Visibility="Collapsed" />
+            <Button x:Name="Choice2" Width="100" Height="30" Click="GoSpecificDialogue" Visibility="Collapsed" />
+            <Button x:Name="Choice3" Width="100" Height="30" Click="GoSpecificDialogue" Visibility="Collapsed" />
+            <Button x:Name="Choice4" Width="100" Height="30" Click="GoSpecificDialogue" Visibility="Collapsed" />
+            <Button x:Name="Choice5" Width="100" Height="30" Click="GoSpecificDialogue" Visibility="Collapsed" />
+            <Button x:Name="Choice6" Width="100" Height="30" Click="GoSpecificDialogue" Visibility="Collapsed" />
+            <Button x:Name="Choice7" Width="100" Height="30" Click="GoSpecificDialogue" Visibility="Collapsed" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "LZeF9eQVab6ocVxkF/m9ZmrP9zbxBdiWkmn5XHS2RpFn2+v+xrar87qReSL5DEC2UsX+66XEWRAg3585vK/qGA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\callm\\RiderProjects\\DialogueToCsv\\DialogueToCsv\\DialogueToCsv.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\callm\\.nuget\\packages\\csvhelper\\32.0.3\\csvhelper.32.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
